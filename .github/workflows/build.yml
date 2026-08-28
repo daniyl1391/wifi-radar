@@ -42,4 +42,3 @@ jobs:
         with:
           name: wifi-radar-debug-apk
           path: WifiRadar/app/build/outputs/apk/debug/app-debug.apk
-          
