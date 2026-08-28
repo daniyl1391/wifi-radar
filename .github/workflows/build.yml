@@ -30,6 +30,11 @@ jobs:
           echo "android.useAndroidX=true" >> gradle.properties
           echo "android.nonTransitiveRClass=true" >> gradle.properties
 
+      - name: Patch manifest theme
+        working-directory: WifiRadar
+        run: |
+          sed -i 's/Theme.Material3.DayNight.NoActionBar/Theme.Material.NoActionBar/' app/src/main/AndroidManifest.xml
+
       - name: Build debug APK
         working-directory: WifiRadar
         run: |
